@@ -1,4 +1,21 @@
+class Bla {
+    int a, b;
+
+    public Bla() {
+        this.a = 0;
+        this.b = 0;
+    }
+}
+
 public class FunctionExample {
+
+    static int[] resetArray(int[] a) {
+        for(int i = 0; i < a.length; i++) {
+            a[i] = 0;
+        }
+
+        return a;
+    }
 
     static int calculateRectangleArea(int a, int b) {
         System.out.println("I received " + a + " and " + b);
@@ -6,6 +23,9 @@ public class FunctionExample {
         int result = a * b;
 
         return result;
+    }
+    static void changeBla(Bla bla) {
+        bla = new Bla();
     }
 
     static int[] reverseIntArray(int[] input) {
@@ -26,6 +46,12 @@ public class FunctionExample {
         int[] arr = {1,2,3,4,5};
         int[] reversedArr = reverseIntArray(arr);
         int[] reversedReversedArr = reverseIntArray(reversedArr);
+
+        Bla b = new Bla();
+        b.b = 100;
+        changeBla(b);
+
+        resetArray(arr);
 
         System.out.println("===");
     }
