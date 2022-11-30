@@ -29,6 +29,14 @@ public class Examples {
         return result;
     }
 
+    static void bla() {
+
+    }
+
+    static int bla(int i) {
+        return 1;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("How large should the array be: ");
